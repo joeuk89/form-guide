@@ -437,14 +437,14 @@ window.EXERCISES = [
 
 // day: 0 = Sunday ... 6 = Saturday (matches JavaScript's getDay)
 window.DAYS = [
-  { id: "mon", day: 1, short: "Mon", title: "OHP, back and arms", items: ["overhead-press", "chest-supported-row", "incline-curl", "lateral-raise", "rear-delt-fly"], extra: { label: "Conditioning", items: ["kettlebell-swing"] } },
+  { id: "mon", day: 1, short: "Mon", title: "OHP, back and arms", items: ["overhead-press", "chest-supported-row", "lateral-raise", "rear-delt-fly", "incline-curl"], extra: { label: "Conditioning", items: ["kettlebell-swing"] } },
   { id: "tue", day: 2, short: "Tue", title: "PT session", note: "Your trainer sets this one. Chest and back one week, legs and core the next.", items: ["bench-press", "lat-pulldown", "db-curl", "back-squat", "box-squat", "deadlift"] },
-  { id: "wed", day: 3, short: "Wed", title: "Pull-up volume and core", items: ["banded-pull-up", "flexed-arm-hang", "suitcase-carry", "single-leg-calf-raise", "lying-leg-raise", "negative-pull-up", "scapular-pull-up"] },
-  { id: "fri", day: 5, short: "Fri", title: "Pull-up test, squat and legs", items: ["pull-up", "back-squat", "romanian-deadlift", "db-shoulder-press", "single-leg-calf-raise", "split-squat", "ab-wheel"] },
-  { id: "sat", day: 6, short: "Sat", title: "Bench, back and arms", items: ["bench-press", "bent-over-row", "dip-negatives", "incline-db-press", "lateral-raise", "overhead-triceps-extension"] },
-  { id: "sun", day: 0, short: "Sun", title: "Deadlift and legs", items: ["banded-pull-up", "deadlift", "hip-thrust", "bulgarian-split-squat", "db-curl", "farmers-walk", "hammer-curl"] },
-  { id: "cond", day: null, short: "Circuit", title: "Strength circuit", items: ["goblet-squat", "kettlebell-swing", "mountain-climber", "ring-push-up"] },
-  { id: "daily", day: null, short: "Daily", title: "Hang and balance", items: ["balance-board", "dead-hang"] }
+  { id: "wed", day: 3, short: "Wed", title: "Pull-up volume and core", items: ["scapular-pull-up", "negative-pull-up", "banded-pull-up", "flexed-arm-hang", "lying-leg-raise", "suitcase-carry", "single-leg-calf-raise"] },
+  { id: "fri", day: 5, short: "Fri", title: "Pull-up test, squat and legs", items: ["pull-up", "back-squat", "romanian-deadlift", "split-squat", "db-shoulder-press", "single-leg-calf-raise", "ab-wheel"] },
+  { id: "sat", day: 6, short: "Sat", title: "Bench, back and arms", items: ["bench-press", "bent-over-row", "incline-db-press", "dip-negatives", "overhead-triceps-extension", "lateral-raise"] },
+  { id: "sun", day: 0, short: "Sun", title: "Deadlift and legs", items: ["deadlift", "bulgarian-split-squat", "hip-thrust", "banded-pull-up", "db-curl", "hammer-curl", "farmers-walk"] },
+  { id: "cond", day: null, short: "Circuit", title: "Strength circuit", items: ["goblet-squat", "ring-push-up", "kettlebell-swing", "mountain-climber"] },
+  { id: "daily", day: null, short: "Daily", title: "Hang and balance", items: ["dead-hang", "balance-board"] }
 ];
 
 window.SESSION_WARMUP = [

@@ -1,5 +1,5 @@
 // Bump VERSION whenever any file changes so installed copies pick up the update.
-const VERSION = "v1";
+const VERSION = "v2";
 const CACHE = "form-guide-" + VERSION;
 const SHELL = ["./", "index.html", "styles.css", "data.js", "app.js", "manifest.webmanifest",
   "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png"];
