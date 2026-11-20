@@ -1,5 +1,5 @@
 // Bump VERSION whenever any file changes so installed copies pick up the update.
-const VERSION = "v2";
+const VERSION = "v3";
 const CACHE = "form-guide-" + VERSION;
 const SHELL = ["./", "index.html", "styles.css", "data.js", "app.js", "manifest.webmanifest",
   "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png"];
@@ -17,7 +17,8 @@ self.addEventListener("fetch", (e) => {
   const req = e.request;
   if (req.method !== "GET" || new URL(req.url).origin !== location.origin) return;
   e.respondWith(
-    fetch(req).then((res) => {
+    // "no-cache" makes the browser check with the server every time instead of trusting its own 10-minute copy.
+    fetch(req, { cache: "no-cache" }).then((res) => {
       const copy = res.clone();
       caches.open(CACHE).then((c) => c.put(req, copy));
       return res;

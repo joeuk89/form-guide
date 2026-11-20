@@ -120,6 +120,12 @@
   route();
 
   if ("serviceWorker" in navigator && location.protocol === "https:") {
-    navigator.serviceWorker.register("sw.js").catch(() => {});
+    // Reload once when an updated version takes over, so the new content shows on this open, not the next.
+    const hadController = !!navigator.serviceWorker.controller;
+    let reloaded = false;
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (hadController && !reloaded) { reloaded = true; location.reload(); }
+    });
+    navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).then((r) => r.update()).catch(() => {});
   }
 })();
